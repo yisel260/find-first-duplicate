@@ -1,4 +1,12 @@
 function findFirstDuplicate(arr) {
+  const uniques = new Set();
+  for (const value of arr) {
+    if (uniques.has(value)) {
+      return value;
+    }
+    uniques.add(value);
+  }
+  return -1;
   // type your code here
 }
 
